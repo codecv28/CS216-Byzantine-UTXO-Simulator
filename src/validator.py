@@ -1,10 +1,9 @@
 from typing import Tuple
 from transaction import Transaction
 from utxo_manager import UTXOManager
-from mempool import Mempool
 
 
-def validate_transaction(transaction: Transaction, utxo_manager: UTXOManager, mempool: Mempool) -> Tuple[bool, str]:
+def validate_transaction(transaction: Transaction, utxo_manager: UTXOManager, mempool) -> Tuple[bool, str]:
 
     inputs = transaction.inputs
     outputs = transaction.outputs
