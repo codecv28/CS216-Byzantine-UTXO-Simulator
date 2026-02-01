@@ -38,7 +38,13 @@ class UTXOManager:
             print(f"Warning: Attempted to remove non-existent UTXO {key}")
 
         
-    
+    def get_amount(self, tx_id: str, index: int) -> float:
+        key = (tx_id, index)
+        if key not in self.utxo_set:
+            raise ValueError(f"UTXO {key} not found")
+        return self.utxo_set[key]["amount"]
+
+
     def get_balance(self, owner: str) -> float:
         """Calculate total balance for an address."""
         balance = 0.0
