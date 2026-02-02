@@ -1,4 +1,9 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 from utxo_manager import UTXOManager
+from tests.test_scenarios import run_all_tests
+
 
 def main():
 
@@ -35,7 +40,9 @@ def main():
             print("Mining not wired yet.")
 
         elif ch == "5":
-            print("Test scenarios not wired yet.")
+
+            run_all_tests()
+
 
         elif ch == "6":
             break

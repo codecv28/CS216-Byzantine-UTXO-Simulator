@@ -1,7 +1,7 @@
 # mempool.py
 from typing import List, Tuple
 from transaction import Transaction
-from validation import validate_transaction
+from validator import validate_transaction
 from utxo_manager import UTXOManager
 
 
