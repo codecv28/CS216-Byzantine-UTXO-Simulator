@@ -5,6 +5,11 @@ class UTXOManager:
 
         self._create_genesis_block()
 
+    def get_amount(self, tx_id, index):
+        return self.utxo_set[(tx_id, index)]["amount"]
+
+
+
     def _create_genesis_block(self):
         
         genesis_tx_id = "genesis"
