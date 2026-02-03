@@ -4,8 +4,6 @@ from utxo_manager import UTXOManager
 
 
 def validate_transaction(transaction: Transaction, utxo_manager: UTXOManager, mempool) -> Tuple[bool, str]:
-
-
     inputs = transaction.inputs
     outputs = transaction.outputs
 
@@ -43,6 +41,14 @@ def validate_transaction(transaction: Transaction, utxo_manager: UTXOManager, me
     if input_amt < output_amt:
         return False, "Insufficient input amount"
     
-    transaction.fee = input_amt - output_amt
+    # Calculate fee (this should match the fee already set in the transaction)
+    calculated_fee = input_amt - output_amt
+    
+    # Update transaction fee if not already set correctly
+    if abs(transaction.fee - calculated_fee) > 0.00000001:  # Allow for floating point precision
+        transaction.fee = calculated_fee
+        # Recalculate fee rate based on actual fee
+        if transaction.size_bytes > 0:
+            transaction.fee_rate = (calculated_fee * 100_000_000) / transaction.size_bytes
 
     return True, "Transaction is valid"
