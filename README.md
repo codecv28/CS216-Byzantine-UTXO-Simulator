@@ -25,7 +25,7 @@ This project implements a comprehensive Bitcoin transaction simulator that demon
 - **Double-Spend Prevention**: Mempool conflict detection
 - **Race Attack Simulation**: First-seen rule implementation
 
-## 🛠️ Installation
+##  Installation
 
 ### Prerequisites
 - Python 3.7 or higher
@@ -77,7 +77,7 @@ Select option 5 from main menu, then choose:
 - Individual tests (1-10) for specific scenarios
 - Option 11 to run all tests with comprehensive results
 
-## 🏗️ System Design
+##  System Design
 
 ### Architecture Overview
 ```
@@ -162,7 +162,7 @@ The simulator includes 10 comprehensive tests:
 9. **Complete Mining Flow** - End-to-end mining process
 10. **Unconfirmed Chain** - Unconfirmed UTXO handling
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Blockchain/
@@ -188,7 +188,7 @@ Blockchain/
 - Single-threaded execution model
 
 
-## 📄 License
+## License
 
 This project is created for educational purposes as part of CS 216 coursework.
 

@@ -24,10 +24,16 @@ def main():
     utxo = UTXOManager()
     mempool = Mempool()
 
-    # Genesis UTXOs are already created in UTXOManager constructor
     
     while True:
         print("\n=== Bitcoin Transaction Simulator ===")
+        print("Initial UTXOs ( Genesis Block ) :")
+        if not utxo.utxo_set:
+                print("No UTXOs available")
+        else:
+            for k, v in utxo.utxo_set.items():
+                print(f"{k} -> {v}")
+        print("Main Menu :")
         print("1. Create new transaction")
         print("2. View UTXO set")
         print("3. View mempool")
@@ -86,7 +92,7 @@ def main():
             print(f"Miner {miner_name} receives {total_fees:.8f} BTC")
             
             mine_block(miner_name, mempool, utxo)
-            print("✅ Block mined successfully!")
+            print("Block mined successfully!")
             print(f"Removed {selected_count} transactions from mempool.")
 
         elif ch == "5":

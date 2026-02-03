@@ -1,0 +1,144 @@
+(.venv) (base) abhishek@Abhisheks-Laptop Blockchain % python src/main.py
+
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs ( Genesis Block ) :
+('genesis', 0) -> {'amount': 50.0, 'owner': 'Alice'}
+('genesis', 1) -> {'amount': 30.0, 'owner': 'Bob'}
+('genesis', 2) -> {'amount': 20.0, 'owner': 'Charlie'}
+('genesis', 3) -> {'amount': 10.0, 'owner': 'David'}
+('genesis', 4) -> {'amount': 5.0, 'owner': 'Eve'}
+
+Main Menu :
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice: 1
+Enter sender: Alice
+Available balance: 50.0 BTC
+Enter recipient: Bob
+Enter amount: 45
+Creating transaction...
+
+Transaction size: 192 bytes
+
+Fee Rate Options:
+1. Low Priority (1 sat/byte) - May take hours
+2. Medium Priority (10 sat/byte) - ~30 minutes
+3. High Priority (50 sat/byte) - ~10 minutes
+4. Custom fee rate
+Select fee option (1-4): 3
+Fee rate: 50.0 sat/byte
+Required fee: 0.00009600 BTC
+Change: 4.99990400 BTC
+
+✅ Transaction created successfully!
+Transaction ID: tx_alice_bob_1770135998
+Fee paid: 0.00009600 BTC (50.0 sat/byte)
+Transaction added to mempool.
+Mempool now has 1 transactions.
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs ( Genesis Block ) :
+('genesis', 0) -> {'amount': 50.0, 'owner': 'Alice'}
+('genesis', 1) -> {'amount': 30.0, 'owner': 'Bob'}
+('genesis', 2) -> {'amount': 20.0, 'owner': 'Charlie'}
+('genesis', 3) -> {'amount': 10.0, 'owner': 'David'}
+('genesis', 4) -> {'amount': 5.0, 'owner': 'Eve'}
+
+Main Menu :
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice: 3
+
+=== Mempool ===
+Transactions in mempool: 1
+------------------------------------------------------------
+Transaction 1: tx_alice_bob_1770135998
+  Size: 226 bytes
+  Fee: 0.00009600 BTC (42.5 sat/byte)
+  Inputs: 1, Outputs: 2
+------------------------------------------------------------
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs ( Genesis Block ) :
+('genesis', 0) -> {'amount': 50.0, 'owner': 'Alice'}
+('genesis', 1) -> {'amount': 30.0, 'owner': 'Bob'}
+('genesis', 2) -> {'amount': 20.0, 'owner': 'Charlie'}
+('genesis', 3) -> {'amount': 10.0, 'owner': 'David'}
+('genesis', 4) -> {'amount': 5.0, 'owner': 'Eve'}
+
+Main Menu :
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice: 4
+Enter miner name: Miner1
+Mining block...
+Selected 1 highest fee transactions:
+  1. tx_alice_bob_1770135998 - Fee: 0.00009600 BTC (42.5 sat/byte)
+Total fees collected: 0.00009600 BTC
+Miner Miner1 receives 0.00009600 BTC
+✅ Block mined successfully!
+Removed 1 transactions from mempool.
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs ( Genesis Block ) :
+('genesis', 1) -> {'amount': 30.0, 'owner': 'Bob'}
+('genesis', 2) -> {'amount': 20.0, 'owner': 'Charlie'}
+('genesis', 3) -> {'amount': 10.0, 'owner': 'David'}
+('genesis', 4) -> {'amount': 5.0, 'owner': 'Eve'}
+('tx_alice_bob_1770135998', 0) -> {'amount': 45.0, 'owner': 'Bob'}
+('tx_alice_bob_1770135998', 1) -> {'amount': 4.999904, 'owner': 'Alice'}
+('coinbase_Miner1_1770136028', 0) -> {'amount': 9.599999999920783e-05, 'owner': 'Miner1'}
+
+Main Menu :
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice: 2
+
+=== UTXO Set ===
+('genesis', 1) -> {'amount': 30.0, 'owner': 'Bob'}
+('genesis', 2) -> {'amount': 20.0, 'owner': 'Charlie'}
+('genesis', 3) -> {'amount': 10.0, 'owner': 'David'}
+('genesis', 4) -> {'amount': 5.0, 'owner': 'Eve'}
+('tx_alice_bob_1770135998', 0) -> {'amount': 45.0, 'owner': 'Bob'}
+('tx_alice_bob_1770135998', 1) -> {'amount': 4.999904, 'owner': 'Alice'}
+('coinbase_Miner1_1770136028', 0) -> {'amount': 9.599999999920783e-05, 'owner': 'Miner1'}
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs ( Genesis Block ) :
+('genesis', 1) -> {'amount': 30.0, 'owner': 'Bob'}
+('genesis', 2) -> {'amount': 20.0, 'owner': 'Charlie'}
+('genesis', 3) -> {'amount': 10.0, 'owner': 'David'}
+('genesis', 4) -> {'amount': 5.0, 'owner': 'Eve'}
+('tx_alice_bob_1770135998', 0) -> {'amount': 45.0, 'owner': 'Bob'}
+('tx_alice_bob_1770135998', 1) -> {'amount': 4.999904, 'owner': 'Alice'}
+('coinbase_Miner1_1770136028', 0) -> {'amount': 9.599999999920783e-05, 'owner': 'Miner1'}
+
+Main Menu :
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice: 6
+(.venv) (base) abhishek@Abhisheks-Laptop Blockchain % 
+
+
+
