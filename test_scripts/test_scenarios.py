@@ -35,13 +35,13 @@ def run_all_tests():
         try:
             result = test_func()
             if result:
-                print("✅ PASSED")
+                print("PASSED")
                 passed += 1
             else:
-                print("❌ FAILED")
+                print("FAILED")
                 failed += 1
         except Exception as e:
-            print(f"❌ ERROR: {e}")
+            print(f" ERROR: {e}")
             failed += 1
     
     print(f"\n{'='*60}")
